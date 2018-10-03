@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>게시판</title>
+    <link rel="stylesheet" type="text/css" href="./../static/board_form.css">
+  </head>
+
+  <body>
+    <form method="GET" action='/logout'>
+      {{ body_data }}님 환영합니다.
+    <button type="submit" style="background:grey; fontsize:1.1em; color:#fff">로그아웃</button>
+    </form>
+    <hr>
+    <div style="text-align:center">
+    <h1> 게시판</h1>
+    </div>
+
+    <div>
+      <table class = "tbl-ex" width="400px;" height="100px;" style="table-layout:fixed">
+      <thead>
+        <tr>
+          <th>번호</th>
+          <th>제목</th>
+          <th>작성자</th>
+          <th>작성시간</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for i in body_data2 %}
+        <tr>
+          <td><a href="data?idx={{i[0]}}">{{ i[0] }}</a></td>
+          <td> {{ i[1] }}</td>
+          <td> {{ i[3] }} </td>
+          <td> {{ i[5] }} </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    </div>
+
+    <form action="/write" method="GET">
+        <button type="submit" style="background:grey; fontsize:1.1em; color:#fff">게시글 작성</button>
+        <button type="submit" style="background:grey; fontsize:1.1em; color:#fff" formaction="/modify">게시물 수정</button>
+        <button type="submit" style="background:grey; fontsize:1.1em; color:#fff" formaction="/delete">게시물 삭제</button>
+    </form>
+
+
+  </body>
+</html>
+

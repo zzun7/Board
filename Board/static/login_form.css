@@ -1,0 +1,30 @@
+<style type="text/css">
+* {
+    * margin: 0;
+    * padding: 0;
+    * }
+body{
+    font-family: "맑은 고딕";
+    font-size: 0.75em;
+    color: #333;
+}
+
+#login_form{
+    width:200px;
+    margin:100px auto;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+#login-form input, #login-form label{
+    display:block;
+}
+
+#login_form label{
+    margin-top : 10px
+}
+#login_form input{
+    margin-top : 5px
+}
+</style>

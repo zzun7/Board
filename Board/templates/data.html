@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>게시내용</title>
+    <link rel="stylesheet" type="text/css" href="./../static/login_form.css">
+    </head>
+    <body>
+      <div>
+        <br>
+        <br>
+        <ul>
+          <h3><li> 글 번 호 : {{ body_data1[0] }}</li></h3>
+          <h3><li> 작 성 자 : {{ body_data1[3] }}</li></h3>
+          <h3><li> 게시 제목 : {{ body_data1[1] }}</li></h3>
+          <h3><li> 게시 내용 : {{ body_data1[2] }}</li></h3>
+        </ul>
+      </div>
+      <br>
+
+
+      <form id="login_form" method="POST" action='/reply'>"
+        <label class="legend">댓글내용 : </label>
+        <input type="text" name="data">
+        <input type="hidden" name="idx" value="{{ body_data1[0] }}">
+        <input type="hidden" name="title" value="{{ body_data1[1] }}">
+        <button type="submit" style="background:grey; fontsize:1.1em; color:#fff" >댓글 달기</button>
+      </form>
+      <br>
+
+      <br>
+      <div>
+        <table class="tbl-ex" width="600px;" height="100px;" style="position:absolute">
+         <thead>
+            <tr>
+              <th> </th>
+              <th > 댓글 순서 </th>
+              <th> 내  용</th>
+              <th> 작성자 </th>
+              <th> 작성 시간</th>
+          </thead>
+          <tbody>
+            {% for i in body_data2 %}
+            <tr>
+              <td style="text-align:center;">└ </td>
+              <td style="text-align:center;"> {{ i[0] }}</td>
+              <!--        <td> {{ i[1] }}</td>
+              <td> {{ i[2] }}</td> -->
+              <td style="text-align:center;"> {{ i[3] }}</td>
+              <td style="text-align:center;"> {{ i[4]}}</td>
+              <td style="text-align:center;"> {{ i[5]}}</td>
+
+              <form action="/reply_modify", method="GET">
+                <td> <button type="submit" name="num" value="{{ i[0] }}" style="width:65pt; heigth:10pt; background:grey; fontsize:1.1em; color:#fff"> 댓글 수정</button></td>
+                <td><button type="submit" name="numb" value="{{ i[0] }}" formaction="/reply_delete" style="width:65pt; heigth:10pt; background:grey; fontsize:1.1em; color:#fff"> 댓글 삭제</button></td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </body>
+</html>

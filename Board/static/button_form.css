@@ -1,0 +1,21 @@
+<style type="text/css" media="screen">
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family : '맑은 고딕' 돋움;
+    font-size : 0.75em;
+    color : #333
+}
+.button{
+    margin : 100px auto 0px auto;
+    border : 1px solid gray;
+    border-width : 1px 0;
+    border-collapse : collapse;
+    text-align : auto;
+    padding : 8px;
+}
+</style>
+

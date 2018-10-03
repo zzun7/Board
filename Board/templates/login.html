@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>로그인</title>
+    <link rel="stylesheet" type="text/css" href="./../static/login_form.css">
+  </head>
+
+  <body>
+    <form id="login_form" method="POST" action="/login">
+      <label class="legend">아이디</label>
+      <input type="text" name="user_id"><br>
+
+      <label class="legend">패스워드</label>
+      <input type="password" name="user_pw"><br>
+      <button type="submit">로그인</button>
+      <button type="submit" formmethod="GET" formaction="/out1">회원탈퇴</button>
+    </form>
+  </body>
+</html>

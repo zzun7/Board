@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>글쓰기</title>
+    <link rel="stylesheet" type="text/css" href="./../static/login_form.css">
+  </head>
+
+  <body>
+    <form id="login_form" method="POST" action="/add_write" enctype="multipart/form-data">
+      <label class="legend">제목</label><br>
+      <input type="text" name="title"><br>
+
+      <label class="legend">내용</label><br>
+      <input type="text" name="data"><br>
+
+      <label class="legend">파일</label><br>
+      <input type="file" name="file"/><br>
+
+      <label class="legend">패스워드</label>
+      <input type="text" name="pw"><br>
+    <!-- <form action="/board"> -->
+      <button type="submit">작성하기</button>
+      <!-- <button type="submit" formaction='/upload'>업로드하기</button> -->
+    </form>
+  </body>
+</html>

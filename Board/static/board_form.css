@@ -1,0 +1,41 @@
+<style type="text/css" media="screen">
+
+*{
+    margin:0;
+    padding:0;
+}
+body {
+    font-family: '맑은 고딕' 돋움;
+    font-size:0.75em;
+    color:#333
+}
+
+.tbl-ex{
+    margin:100px auto 0px auto;
+}
+.tbl-ex, .tbl-ex th, .tbl-ex td{
+    border:1px solid gray;
+    border-width: 1px 0;
+    border-collapse:collapse;
+    text-align: center;
+    padding:8px;
+}
+
+.tbl-ex th{
+    background-color : #999;
+    font-size : 1.1em;
+    color: #fff;
+    border-width:2px 0;
+}
+.tbl-ex td{
+    border-style:dotted;
+}
+
+.tbl-ex tr:hover td{
+    background-color: yellow;
+    cursor : pointer;
+}
+.even{
+    background-color: highlight;
+}
+</style>

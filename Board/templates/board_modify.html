@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>게시물 수정</title>
+    <link rel="stylesheet" type="text/css" href="./../static/login_form.css">
+  </head>
+
+  <body>
+    <form id="login_form" method="POST" action="/board_modify">
+      <label class="legend">게시물 번호</label>
+      <input type="text" name="num"><br>
+
+      <label class="legend">게시물 패스워드</label>
+      <input type="text" name="pw"><br>
+      <br>
+      <hr>
+      수정할 게시물의 내용을 쓰시오.
+      <hr>
+      <br>
+      <label class="legend">제목</label><br>
+      <input type="text" name="title"><br>
+
+      <label class="legend">내용</label><br>
+       <input type="text" name="data"><br>
+
+       <button type="submit"> 수정하기 </button>
+  </body>
+</html>
+
+
+

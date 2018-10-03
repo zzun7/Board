@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>게시물 수정</title>
+    <link rel="stylesheet" type="text/css" href="./../static/login_form.css">
+  </head>
+  <body>
+    <form id="login_form" method="POST" action="/reply_modify2">
+      <hr>
+      수정할 댓글의 내용을 쓰시오.
+      <hr>
+      <br>
+      <input type="hidden" name="num" value="{{value}}">
+      <label class="legend">내용</label><br>
+      <input type="text" name="data"><br>
+      <button type="submit"> 수정하기 </button>
+  </body>
+</html>
+
+
